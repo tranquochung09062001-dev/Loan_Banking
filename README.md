@@ -1,6 +1,6 @@
 # 💳 Credit Portfolio Risk & Concentration Analysis Dashboard | ETL Pipeline, Star Schema & Power BI
 
-![Credit Portfolio Risk & Concentration Analysis Dashboard](./Dashboard_Cover.png)
+![Credit Portfolio Risk & Concentration Analysis Dashboard](https://raw.githubusercontent.com/tranquochung09062001-dev/Loan_Banking/main/Dashboard_Cover.png)
 
 A 2,000-customer credit portfolio analysis for a commercial bank's Risk Management & Data Analytics division, built on a Python + PostgreSQL ETL pipeline (Bronze → Silver → Gold) and delivered as a Power BI dashboard for senior leadership: **is the portfolio still growing, where is exposure concentrated, and is the riskiest segment priced appropriately?**
 
@@ -33,7 +33,7 @@ Each customer carries essentially one loan — the product behaves as a one-time
 
 Source data is loan-origination records spanning 2012–2019, ingested from CSV into PostgreSQL and modeled as a star schema before being loaded into Power BI.
 
-<img width="700" alt="Credit Portfolio Data Model" src="./Data_Model.png" />
+<img width="700" alt="Credit Portfolio Data Model" src="https://raw.githubusercontent.com/tranquochung09062001-dev/Loan_Banking/main/model.png" />
 
 **`dwh.fact_loan`** — one row per loan, holding the foreign keys to all five dimensions plus the cleaned numeric measures: `amt_funded`, `amt_loan_balance`, `pct_interest_rate`, `amt_monthly_payment`, `num_duration_years/months`, `amt_total_payments`, `amt_property_value`.
 
@@ -50,8 +50,8 @@ Source data is loan-origination records spanning 2012–2019, ingested from CSV 
 To keep the report anchored to a real decision-maker rather than "every chart that could be built," the dashboard was scoped using a 4-step Design Thinking pass:
 
 <table>
-<tr><td><img src="./step1_design_thinking.png" width="480"/></td><td><img src="./step2_design_thinking.png" width="480"/></td></tr>
-<tr><td><img src="./design_thinking_step3.png" width="480"/></td><td><img src="./design_thinking_step4.png" width="480"/></td></tr>
+<tr><td><img src="https://raw.githubusercontent.com/tranquochung09062001-dev/Loan_Banking/main/step1_design_thinking.png" width="480"/></td><td><img src="https://raw.githubusercontent.com/tranquochung09062001-dev/Loan_Banking/main/step2_design_thinking.png" width="480"/></td></tr>
+<tr><td><img src="https://raw.githubusercontent.com/tranquochung09062001-dev/Loan_Banking/main/design_thinking_step3.png" width="480"/></td><td><img src="https://raw.githubusercontent.com/tranquochung09062001-dev/Loan_Banking/main/design_thinking_step4.png" width="480"/></td></tr>
 </table>
 
 **1. Empathize** — the stakeholder is a Head of Risk Management who reviews the report at quarterly portfolio meetings, never opens raw tables, compares severity *across* regions/industries rather than reading one number in isolation, and thinks in limit-to-income ratio tiers rather than raw amounts.
@@ -116,7 +116,7 @@ Data moves through a 2-stage pipeline into a classic **Bronze → Silver → Gol
 
 ### 1. Portfolio Overview
 
-![Overview Dashboard](./Overview_Dashboard.png)
+![Overview Dashboard](https://raw.githubusercontent.com/tranquochung09062001-dev/Loan_Banking/main/Overview_Dashboard.png)
 
 - Gender split is close to even: **Female 51.52%** (864 customers) vs. **Male 48.48%** (813).
 - After recalibrating income bands to the actual tercile thresholds, customers split almost evenly into three income groups — Under 3M: **35.8%**, 3–6M: **32.9%**, Over 6M: **31.3%** — but the distribution's right tail is steep: the highest recorded income (52.54M) is **12.7×** the median.
@@ -124,7 +124,7 @@ Data moves through a 2-stage pipeline into a classic **Bronze → Silver → Gol
 
 ### 2. Region & Purpose (incl. the 70/30 Industry View)
 
-![Region and Purpose Dashboard](./Region_Purpose_Dashboard.png)
+![Region and Purpose Dashboard](https://raw.githubusercontent.com/tranquochung09062001-dev/Loan_Banking/main/Region_Purpose_Dashboard.png)
 
 | Region | % of customers | Dominant purpose (Investment Property) |
 |---|---|---|
@@ -140,14 +140,14 @@ Data moves through a 2-stage pipeline into a classic **Bronze → Silver → Gol
 
 ### 3. Customer Analysis
 
-![Customer Dashboard](./Customer_Dashboard.png)
+![Customer Dashboard](https://raw.githubusercontent.com/tranquochung09062001-dev/Loan_Banking/main/Customer_Dashboard.png)
 
 - The **highest** individual limit belongs to Jesse Kyle Weaver (**12.5 million**); the **lowest** to Samantha Abigail Nelson (**440 thousand**) — checked and confirmed no ties at either end.
 - The customer base skews young, concentrated in the 21–40 age bands, consistent with a product mix dominated by investment-property borrowers still in their asset-accumulation years.
 
 ### 4. Risk / Lending Behavior
 
-![Risk Dashboard](./Risk_Dashboard.png)
+![Risk Dashboard](https://raw.githubusercontent.com/tranquochung09062001-dev/Loan_Banking/main/Risk_Dashboard.png)
 
 100% of loans in the dataset fall into exactly **5 fixed limit-to-income ratio tiers**, distributed fairly evenly:
 
